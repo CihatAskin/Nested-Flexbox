@@ -1,0 +1,90 @@
+html {
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: 'Trade Winds';
+    font-size: 18px;
+    font-weight: 200;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#panels {
+    background-color: antiquewhite;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.panel {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    box-shadow:  0 0 2px #F5F3E7 inset ;
+    transition: font-size 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045), flex 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045), backgraund 0.7s;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+    color: #F5F3E7;
+}
+
+.panel * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel>*:first-child {
+    transform: translateY(-100%);
+}
+
+.panel>*:last-child {
+    transform: translateY(100%);
+}
+
+.panel.open-active>*:first-child {
+    transform: translateY(0);
+}
+
+.panel.open-active>*:last-child {
+    transform: translateY(0);
+}
+
+.panel.open {
+    flex: 5;
+    font-size: 40px;
+}
+
+#box1 {
+    background-image: url(img/butterfly.jpg);
+    width: 70%;
+}
+
+#box2 {
+    background-image: url(img/flower.jpg);
+}
+
+#box3 {
+    background-image: url(img/eagle.jpg);
+}
+
+#box4 {
+    background-image: url(img/orange-flowers-roses-oranzhevye-rozy.jpg);;
+}
+.avoid-clicks{
+
+    pointer-events: none;
+}
